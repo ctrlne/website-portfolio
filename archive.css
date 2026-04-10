@@ -1,0 +1,178 @@
+/* =========================================
+   ARCHIVE PAGE: THE SHOWCASE (Modern Curated)
+   ========================================= */
+
+.archive-social {
+    margin-top: -30px;
+    margin-bottom: 80px;
+}
+
+.ig-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 22px;
+    /* Borrowing the exact soft styling from your resume icon */
+    background: rgba(201, 180, 195, 0.15); 
+    border: 1px solid rgba(201, 180, 195, 0.5); 
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400; /* Removed the bold! */
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.ig-btn i {
+    font-size: 1.1rem;
+}
+
+.ig-btn:hover {
+    /* Same cute hover effect as the resume icon */
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* --- Showcase Layout --- */
+.archive-showcase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Lots of breathing room between projects */
+    padding-bottom: 80px;
+}
+
+.showcase-item {
+    width: 100%;
+    /* Scroll Animation Initial State */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Scroll Animation Active State (Triggered by JS) */
+.showcase-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.showcase-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.showcase-desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+}
+
+/* --- Media Boxes (Images & Videos) --- */
+.showcase-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.reels-split {
+    max-width: 900px; /* Widened slightly so the landscape video has more room */
+    margin: 0 auto;
+    align-items: center; /* This tells the grid to vertically center them instead of stretching them to be equal height */
+}
+
+.square-reel {
+    aspect-ratio: 1 / 1; /* Forces a perfect square */
+    width: 100%;
+    height: auto;
+    background: #111; /* Dark background to frame the videos cleanly */
+}
+
+.square-reel video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps the true shape inside the square without cropping */
+}
+
+.media-box {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f4f4f4;
+    border: 1px solid var(--card-inner-box-border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.media-box img, .media-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Carousel --- */
+.carousel-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Hides the images sliding off screen */
+    border-radius: 12px;
+    border: 1px solid var(--card-inner-box-border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    background: #000;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%; /* Forces each image to take up exactly one full view */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--accent-red);
+    transform: scale(1.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .showcase-split {
+        grid-template-columns: 1fr;
+    }
+    .showcase-title {
+        font-size: 1.8rem;
+    }
+}
