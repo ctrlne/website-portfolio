@@ -21,13 +21,25 @@
 
     <nav id="navbar">
         <div class="nav-content">
-            <a href="#" class="logo" data-target="home">CLAIRE ANTONETTE</a>
-            <div class="nav-right">
+            <a href="#" class="logo" data-target="home">
+                <span class="desktop-logo">CLAIRE ANTONETTE</span>
+                <span class="mobile-logo">CA</span>
+            </a>
+            
+            <div class="nav-center">
                 <ul class="nav-links">
                     <li><a href="#" class="active" data-target="home">HOME</a></li>
                     <li><a href="#" data-target="archive">ARCHIVE</a></li>
                     <li><a href="#" data-target="about">ABOUT ME</a></li>
                 </ul>
+            </div>
+
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-switch" title="Toggle Dark Mode">
+                    <i class="fa-solid fa-sun light-icon"></i>
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <span class="switch-thumb"></span>
+                </button>
                 <a href="docs/resume_ojt.pdf" target="_blank" class="resume-circle" title="View Resume">
                     <i class="fa-solid fa-file-lines"></i>
                 </a>
@@ -48,7 +60,7 @@
             </div>
 
             <div class="projects-grid">
-                <a href="https://www.behance.net/gallery/246639941/Tyche-Nails-Admin-Dashboard-Operations-Design" target="_blank" class="project-card">
+                <a href="https://www.behance.net/gallery/246639941/Tyche-Nails-Admin-Dashboard-Operations-Design" target="_blank" class="project-card reveal-on-scroll" style="--hover-glow: rgba(244, 143, 177, 0.236);">
                     <div class="project-top-container">
                         <img src="images/tyche nails.png" alt="Tyche Nails App">
                     </div>
@@ -62,7 +74,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.behance.net/gallery/246640153/Project-Agos-Seamless-Resource-Navigation" target="_blank" class="project-card">
+                <a href="https://www.behance.net/gallery/246640153/Project-Agos-Seamless-Resource-Navigation" target="_blank" class="project-card reveal-on-scroll" style="--hover-glow: rgba(71, 165, 165, 0.162);">
                     <div class="project-top-container">
                         <img src="images/project agos.png" alt="Project AGOS">
                     </div>
@@ -76,7 +88,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.behance.net/gallery/246642549/Loop-A-Peer-to-Peer-Exchange-for-Mapua-University" target="_blank" class="project-card">
+                <a href="https://www.behance.net/gallery/246642549/Loop-A-Peer-to-Peer-Exchange-for-Mapua-University" target="_blank" class="project-card reveal-on-scroll" style="--hover-glow: rgba(255, 38, 38, 0.068);">
                     <div class="project-top-container">
                         <img src="images/loop.png" alt="Loop">
                     </div>
@@ -89,7 +101,7 @@
                     </div>    
                 </a>
 
-                <a href="https://github.com/ctrlne/Cocopan-Data-Sales" target="_blank" class="project-card">
+                <a href="https://github.com/ctrlne/Cocopan-Data-Sales" target="_blank" class="project-card reveal-on-scroll" style="--hover-glow: rgba(223, 127, 25, 0.075);">
                     <div class="github-icon"><i class="fa-brands fa-github"></i></div>
                     <div class="project-top-container">
                         <img src="images/cocopan.png" alt="Cocopan Insights Dashboard">
