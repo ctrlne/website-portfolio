@@ -567,6 +567,7 @@ body.dark-mode .section-intro,
 body.dark-mode .standard-desc,
 body.dark-mode .custom-list li,
 body.dark-mode .meta-item p,
+body.dark-mode .restricted-actions p,
 body.dark-mode .caption-desc,
 body.dark-mode .caption-block p,
 body.dark-mode .contents-nav a,
@@ -680,56 +681,155 @@ body.dark-mode .github-solid-btn:hover {
     color: #ffffff;
 }
 
-/* --- RESPONSIVE DESIGN --- */
+/* =========================================
+   MASTER RESPONSIVE OVERRIDES (TABLET & MOBILE)
+   ========================================= */
+
+/* --- TABLET VIEW (Max 1100px) --- */
 @media (max-width: 1100px) {
-    .cs-layout-grid { 
-        grid-template-columns: 1fr; 
+    /* Collapse the 3-column grid into 1 column */
+    .cs-layout-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        left: 0;
     }
 
-    .cs-sidebar-left { 
-        position: relative; 
-        height: auto; 
-        padding: 40px 5%; 
+    /* Keep the back button, but remove fixed positioning */
+    .cs-sidebar-left {
+        position: relative;
+        height: auto;
+        padding: 100px 5% 20px 5%; /* Accounts for fixed navbar */
+        top: 0;
     }
 
+    /* Hide the Table of Contents & Floating Back to Top */
     .contents-wrapper, 
-    .cs-sidebar-right { 
+    .cs-sidebar-right {
         display: none; 
     }
 
-    .cs-main-content { 
-        padding: 40px 5%; 
+    /* Expand main content */
+    .cs-main-content {
+        padding: 20px 5% 60px 5%;
+        max-width: 100%;
     }
 
-    .hero-title { 
-        font-size: 3.5rem; 
+    .hero-title {
+        font-size: 3.5rem;
     }
 
+    /* Convert specific 3-column elements to 2-columns on tablet */
     .project-meta-grid, 
-    .two-col-text { 
-        grid-template-columns: 1fr 1fr; 
+    .mobile-grid-3,
+    .caption-grid-3,
+    .sdg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .keep-exploring-section .projects-grid {
+        width: 100%;
+        margin-left: 0;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 900px) {
+/* --- MOBILE VIEW (Max 768px) --- */
+@media (max-width: 768px) {
+    /* Typography Scaling */
+    .hero-title { font-size: 2.8rem; }
+    .hero-subtitle { font-size: 0.95rem; }
+    .section-heading { font-size: 1.6rem; }
+    .accent-italic-heading { font-size: 2.2rem; }
+    .accent-italic-heading.small { font-size: 1.5rem; }
+    .left-align-heading { font-size: 1.8rem; text-align: center; }
+
+    /* Spacing Reductions */
+    .mt-xl { margin-top: 60px; }
+    .mt-l { margin-top: 40px; }
+    .section-header-line { margin: 50px 0 30px 0; }
+    
+    /* Grid Stacking (Forces everything to 1 column) */
     .project-meta-grid, 
-    .two-col-text { 
-        grid-template-columns: 1fr; 
-    }
-
-    .keep-exploring-section 
-    .projects-grid {
+    .two-col-text, 
+    .engineering-grid,
+    .system-diagram-grid, 
+    .user-flow-grid, 
+    .wireframes-grid,
+    .two-col-images,
+    .mobile-grid-2,
+    .mobile-grid-3,
+    .sdg-grid,
+    .caption-grid-2, 
+    .caption-grid-3,
+    .keep-exploring-section .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
         width: 100%;
-        margin-left: 0;
-        grid-template-columns: 1fr; 
     }
 
-    .keep-exploring-section 
-    .project-card {
-        padding: 20px 15px;
+    .keep-exploring-section .project-card { padding: 20px 15px; }
+    .caption-block { padding: 0; }
+
+    /* Complex Layout Adjustments (Hide Desktop-only lines) */
+    .connector-elbow-top,
+    .connector-elbow-top::before,
+    .connector-elbow-top::after,
+    .connector-branch-bottom,
+    .connector-branch-bottom::after,
+    .connector-s03-polished,
+    .connector-s03-polished::after,
+    .connector-s03-mobile,
+    .connector-s03-mobile::after,
+    .vertical-spacer-line,
+    .timeline-line {
+        display: none !important; 
     }
 
-    .restricted-block {
-        padding: 40px 20px;
+    /* Turn the timeline nodes into a wrapped list instead of fixed line */
+    .timeline-tracker {
+        margin-bottom: 40px;
     }
+    .timeline-nodes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Fix specific text paddings that look weird when stacked */
+    .user-flow-grid .left-col, 
+    .user-flow-grid .right-col,
+    .diagram-text-col,
+    .flow-col-left,
+    .flow-col-right {
+        padding-top: 0; 
+    }
+
+    /* Loop HCI Table Mobile View */
+    .hci-table thead { display: none; }
+    .hci-table td {
+        display: block;
+        width: 100% !important;
+        border-right: none !important;
+    }
+    .hci-table td:first-child {
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-bottom: 1px dashed var(--line-color);
+        padding-bottom: 5px;
+        background: #fafafa;
+    }
+    body.dark-mode .hci-table td:first-child { background: #222; }
+    .hci-table td:last-child {
+        padding-top: 10px;
+        border-bottom: 2px solid var(--line-color);
+    }
+}
+
+/* --- SMALL MOBILE VIEW (Max 480px) --- */
+@media (max-width: 480px) {
+    .hero-title { font-size: 2.2rem; }
+    .restricted-block { padding: 30px 20px; }
+    .restricted-title { font-size: 1.5rem; }
+    .cs-sidebar-left { padding-top: 80px; } 
+    .pill-btn { padding: 8px 15px; font-size: 0.8rem; }
 }
