@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyche Nails | Case Study</title>
+    
+    <link rel="icon" type="image/png" href="images/me.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="cs-tyche.css"> <script src="components.js" defer></script>
+</head>
+<body class="case-study-body">
+
+    <div class="cs-layout-grid">
+        
+        <aside class="cs-sidebar-left">
+            <a href="index.html" class="pill-btn back-to-home">
+                <i class="fa-solid fa-chevron-left"></i> Back to Home
+            </a>
+
+            <div class="contents-wrapper">
+                <h4 class="contents-title">CONTENTS</h4>
+                <nav class="contents-nav" id="scrollspy-nav">
+                    <a href="#overview" class="active">Overview</a>
+                    <a href="#context">Context</a>
+                    <a href="#architecture">Architecture</a>
+                    <a href="#visual-system">Visual System</a>
+                    <a href="#engineering">Engineering & QA</a>
+                    <a href="#impact">Impact</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="cs-main-content">
+            
+            <section id="overview" class="cs-section scroll-section">
+                <div class="hero-text-center pop-in">
+                    <p class="hero-overline">Tyche Nails - UI/UX, Admin<br>Dashboard Portal and Mobile App</p>
+                    <h1 class="hero-title">Tyche Nails</h1>
+                    <p class="hero-subtitle">Designed and engineered an end-to-end salon management ecosystem. Built a consumer-facing mobile app for seamless client booking, powered by a data-rich admin web dashboard for staff governance and AI-driven no-show predictions.</p>
+                </div>
+
+                <div class="hero-image-wrapper pop-in delay-1">
+                    <img src="images/tyche/tyche mockup.png" alt="Tyche Nails Responsive Mockups" class="full-width-img">
+                </div>
+
+                <div class="project-meta-grid pop-in delay-2">
+                    <div class="meta-item">
+                        <h4>TEAM:</h4>
+                        <p>Claire Antonette Mendoza<br>Lanz Matthew Garcia<br>Willard Soriano</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>DESIGN TOOLS:</h4>
+                        <p>Figma<br>Component Architecture<br>Use-Case Mapping</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>INDIVIDUAL ROLE:</h4>
+                        <p>I served as the team lead as well as the lead product designer and frontend dev for the Mobile App. Meanwhile, the admin dashboard was made solely by me as it was the first phase before I grouped with my fellow members for the second phase.</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>TIMELINE:</h4>
+                        <p>6 Months (Academic Project:<br>Software Engineering 1 & 2)</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>TECH STACK:</h4>
+                        <p>HTML/CSS<br>Vanilla JS (ES6+)<br>simulated Node.js/Express backend</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>SCOPE:</h4>
+                        <p>UI/UX, Mobile App, Web Dashboard, Admin Systems, Software Engineering</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="context" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="pink-num">01</span> The Context: Digitizing a Manual System</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="two-col-text pop-in">
+                    <div class="col">
+                        <h4>[Problem Statement]</h4>
+                        <p>After conducting direct interviews with the salon owner, I identified severe operational bottlenecks caused by their manual workflow:</p>
+                        <ol class="custom-list">
+                            <li><strong>Uncentralized Bookings:</strong> Appointments were scattered across Instagram DMs, Messenger, and Apple Notes, leading to double-bookings and missed clients.</li>
+                            <li><strong>No Data Governance:</strong> Staff could not track returning clients, loyalty metrics, or daily revenue without manual tallying.</li>
+                            <li><strong>Inefficient Scheduling:</strong> Complex services (e.g., 3-hour nail extensions) were difficult to map manually across only two staff members.</li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                        <h4>Dual-Sided Solution:</h4>
+                        <p>Instead of a generic plug-and-play app, I proposed a custom, two-part ecosystem tailored to their specific service durations and staff limitations:</p>
+                        <ul class="custom-list bulleted">
+                            <li><strong>Phase 1 (Enterprise UX):</strong> A secure Admin Dashboard to centralize scheduling, client histories, and business analytics.</li>
+                            <li><strong>Phase 2 (Consumer UX):</strong> A frictionless Client Booking Portal to eliminate the "DM-to-book" friction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="architecture" class="cs-section scroll-section section-02-exact">
+                
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="pink-num">02</span> Systems Architecture & UX Strategy</h2>
+                    <div class="line"></div>
+                </div>
+                
+                <p class="exact-intro pop-in">The vision was to design a comprehensive, web-based dashboard system that would serve as a centralized hub for Tyche Nails. The proposed solution replaces manual methods with an integrated digital tool, empowering the team to optimize their workflow, enhance client service, and make data-driven decisions.</p>
+
+                <div class="timeline-tracker pop-in delay-1">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-nodes">
+                        <div class="node active">
+                            <div class="circle"></div>
+                            <p>Sketch<br>Wireframes</p>
+                            <div class="connector-elbow-top"></div>
+                        </div>
+                        <div class="node">
+                            <div class="circle"></div>
+                            <p>Figma<br>Wireframes</p>
+                        </div>
+                        <div class="node">
+                            <div class="circle"></div>
+                            <p>Polished<br>UI Screen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diagram-layout system-diagram-grid pop-in">
+                    <div class="text-col">
+                        <h3 class="pink-italic-heading">System Diagram</h3>
+                        <div class="vertical-spacer-line"></div>
+                        <p class="italic-desc">To define the user's journey,<br>I mapped out the key steps<br>of the entire system's architecture to<br>understand all possible user actions., such as<br><span class="highlight-pink">creating and confirming a new client booking.</span><br>This ensured the final design was logical and<br>intuitive.</p>
+                    </div>
+                    <div class="img-col">
+                        <img src="images/tyche/system diagram.png" alt="System Use Case Diagram" class="diagram-asset">
+                    </div>
+                </div>
+
+                <div class="diagram-layout user-flow-grid pop-in mt-xl">
+                    <div class="text-col left-col">
+                        <h3 class="pink-italic-heading">User Flow Diagram</h3>
+                        <div class="vertical-spacer-line long"></div>
+                        <div class="ux-decisions">
+                            <h4>Key UX Decisions:</h4>
+                            <ul class="custom-list bulleted small-text">
+                                <li><strong>The "Firewall" Approach:</strong> To prevent schedule chaos, client bookings do not automatically confirm. They enter a "Pending Inbox" on the Admin Dashboard, allowing staff to manually vet and approve complex service requests.</li>
+                                <li><strong>Progressive Disclosure:</strong> For the client app, I broke the booking process into a step-by-step wizard to prevent cognitive overload, ensuring service selection, time selection, and contact details were handled sequentially.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="img-col center-col">
+                        <img src="images/tyche/user flowchart.png" alt="User Flowchart" class="diagram-asset flowchart-img">
+                    </div>
+                    
+                    <div class="text-col right-col">
+                        <h3 class="dark-serif-heading">Core User Flow: Creating<br>a New Booking</h3>
+                        <p class="standard-desc">To ensure a seamless user experience, I mapped out the core user flow for the most critical task: <span class="highlight-pink">creating and confirming a new client booking.</span> This process of defining the "happy path" was essential in structuring the final UI and ensuring the user's journey through the application was logical and intuitive from start to finish.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-tracker pop-in mt-xl">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-nodes">
+                        <div class="node">
+                            <div class="circle"></div>
+                            <p>Sketch<br>Wireframes</p>
+                        </div>
+                        <div class="node active">
+                            <div class="circle"></div>
+                            <p>Figma<br>Wireframes</p>
+                            <div class="connector-branch-bottom"></div>
+                        </div>
+                        <div class="node">
+                            <div class="circle"></div>
+                            <p>Polished<br>UI Screen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wireframes-grid pop-in">
+                    <img src="images/tyche/sketch wireframes.png" alt="Sketch Wireframes" class="wireframe-asset">
+                    <img src="images/tyche/figma wireframes.png" alt="Figma Wireframes" class="wireframe-asset">
+                </div>
+
+            </section>
+
+            <section id="visual-system" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="pink-num">03</span> UI Design & Visual System</h2>
+                    <div class="line"></div>
+                </div>
+
+                <p class="section-intro pop-in">The goal was a modern, aesthetic, and frictionless booking flow.</p>
+                <ul class="custom-list bulleted intro-list pop-in">
+                    <li><strong>Visual Hierarchy:</strong> Used high-contrast typography and clear "Available" vs. "Disabled" states for time slots to guide the user seamlessly.</li>
+                    <li><strong>Bot Mitigation (R-G-4):</strong> Integrated a CAPTCHA step before submission to protect the salon's backend from spam requests.</li>
+                </ul>
+
+                <div class="timeline-tracker pop-in mt-xl mb-l">
+                    <div class="timeline-line"></div>
+                    <div class="connector-s03-polished"></div>
+                    <div class="timeline-nodes">
+                        <div class="node">
+                            <div class="circle"></div>
+                            <p>Sketch<br>Wireframes</p>
+                        </div>
+                        <div class="node">
+                            <div class="circle"></div>
+                            <p>Figma<br>Wireframes</p>
+                        </div>
+                        <div class="node active">
+                            <div class="circle"></div>
+                            <p>Polished<br>UI Screen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="full-image-block pop-in mt-l">
+                    <h4 class="centered-subheading">Mobile App (User Side)</h4>
+                    <img src="images/tyche/mobile ui.png" alt="Mobile UI Screens" class="full-width-img">
+                </div>
+
+                <div class="full-video-block pop-in mt-xl">
+                    <h4 class="centered-subheading">Admin Dashboard (Management Side)</h4>
+                    <video src="videos/tyche/management.mp4" autoplay loop muted playsinline class="full-width-video border-radius-lg shadow-light"></video>
+                </div>
+
+                <p class="section-intro pop-in mt-l">Designing for internal operations requires prioritizing data density and clarity over flashy visuals.</p>
+                <ul class="custom-list bulleted intro-list pop-in">
+                    <li><strong>KPI Visualization:</strong> Designed a high-level overview displaying real-time Revenue, Pending Bookings, and Service Breakdowns using clear data visualization components.</li>
+                    <li><strong>Status Management:</strong> Created an intuitive "Inbox" UI for staff to easily Approve, Reject, or Reassign (R-M-3) bookings with a single click.</li>
+                </ul>
+            </section>
+
+            <section id="engineering" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="pink-num">04</span> Engineering & QA</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="engineering-grid pop-in">
+                    <div class="eng-text-col">
+                        <h4 class="bold-heading">From Figma to Node.js</h4>
+                        <p class="standard-desc">Because I acted as both designer and developer, the design-to-code handoff was seamless. I engineered the front-end using HTML/CSS and Vanilla JS (ES6+), utilizing a simulated Node.js/Express backend to mimic real API endpoint behavior.</p>
+                        
+                        <h4 class="bold-heading mt-m">Quality Assurance (UAT)</h4>
+                        <p class="standard-desc">Great design fails without rigorous testing. Me and my members managed the User Acceptance Testing (UAT) phase, logging over 18 specific test cases across both the Guest and Management environments.</p>
+                        
+                        <ul class="custom-list bulleted">
+                            <li><strong>Testing Edge Cases (R-G-3):</strong> Validated system responses for concurrent booking attempts to prevent slot collisions.</li>
+                            <li><strong>Device Compatibility (R-G-6):</strong> Conducted responsive layout testing across standard mobile and tablet viewports to ensure the CSS media queries behaved perfectly.</li>
+                        </ul>
+                    </div>
+                    <div class="eng-img-col">
+                        <img src="images/tyche/UAT Table.png" alt="QA Test Cases Table" class="full-width-img shadow-light border-radius-lg">
+                    </div>
+                </div>
+            </section>
+
+            <section id="impact" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="pink-num">05</span> Impact & Reflection</h2>
+                    <div class="line"></div>
+                </div>
+
+                <p class="section-intro pop-in">The Tyche Nails system successfully digitized a completely manual business. By replacing scattered DMs with a structured ecosystem, the platform eliminated scheduling conflicts, provided instant financial visibility, and created a professional, automated booking experience for clients.</p>
+
+                <div class="two-col-text pop-in mt-l">
+                    <div class="col">
+                        <h4>What I Learned</h4>
+                        <p>Designing complex data tables and analytics dashboards in Figma is straightforward, but translating those responsive, data-heavy layouts into functional CSS requires strict adherence to grid systems and flexbox.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Next Steps</h4>
+                        <p>In a production environment, I would migrate the simulated in-memory Node.js database to a persistent cloud solution like PostgreSQL or Firebase to handle long-term data scaling.</p>
+                    </div>
+                </div>
+
+                <div class="cs-outro pop-in">
+                    <hr class="thin-line">
+                    <h2 class="vibrant-italic-heading">Thank You For Stopping By!</h2>
+                    <p>Feel free to leave any thoughts :)</p>
+                    <div class="outro-links">
+                        <p>Email: <a href="mailto:mendozaclaireantonette791@gmail.com">mendozaclaireantonette791@gmail.com</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/claire-antonette-mendoza-5506382b3/" target="_blank">Claire Antonette Mendoza</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="keep-exploring-section pop-in">
+                <h3 class="vibrant-italic-heading small">Keep Exploring!</h3>
+                
+                <div class="projects-grid mt-l">
+                    <a href="cs-agos.html" class="project-card" style="--hover-glow: rgba(71, 165, 165, 0.162);">
+                        <div class="project-top-container">
+                            <img src="images/project agos.png" alt="Project AGOS">
+                        </div>
+                        <h3>Project AGOS</h3>
+                        <p class="subtitle">Resource Mapping & Workflow</p>
+                        <p class="desc">A digital workflow application designed to map vital resources and translate complex user journeys into an accessible interface.</p>
+                        <div class="tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">ADMIN</span>
+                            <span class="tag">MOBILE</span>
+                        </div>
+                    </a>
+
+                    <a href="cs-loop.html" class="project-card" style="--hover-glow: rgba(255, 38, 38, 0.068);">
+                        <div class="project-top-container">
+                            <img src="images/loop.png" alt="Loop">
+                        </div>
+                        <h3>Loop</h3>
+                        <p class="subtitle">HCI Final Project: Mapua Exchange App</p>
+                        <p class="desc">An interactive campus exchange application utilizing core Human-Computer Interaction principles to foster community engagement.</p>
+                        <div class="tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">MOBILE</span>
+                        </div>    
+                    </a>
+
+                    <a href="cs-cocopan.html" class="project-card" style="--hover-glow: rgba(223, 127, 25, 0.075);">
+                        <div class="project-top-container">
+                            <img src="images/cocopan.png" alt="Cocopan Insights Dashboard">
+                        </div>
+                        <h3>Cocopan Insights</h3>
+                        <p class="subtitle">SME Business Intelligence</p>
+                        <p class="desc">A comprehensive business intelligence dashboard transforming raw datasets into actionable visualizations.</p>
+                        <div class="tags">
+                            <span class="tag" style="background-color: var(--accent-red);">DATA ANALYTICS</span>
+                            <span class="tag" style="background-color: var(--accent-red);">ADMIN</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <aside class="cs-sidebar-right">
+            <button class="circle-btn back-to-top" id="btt-btn">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+        </aside>
+
+    </div>
+
+    <site-footer></site-footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            /* 1. SCROLL REVEAL (Pop-in animation) */
+            const popElements = document.querySelectorAll('.pop-in');
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                });
+            }, observerOptions);
+
+            popElements.forEach(el => appearOnScroll.observe(el));
+
+            /* 2. SCROLLSPY (Contents active state) */
+            const sections = document.querySelectorAll('.scroll-section');
+            const navLinks = document.querySelectorAll('.contents-nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            /* 3. BACK TO TOP BUTTON */
+            const bttBtn = document.getElementById('btt-btn');
+            bttBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            /* 4. CAROUSEL LOGIC */
+            const track = document.getElementById('cs-carousel-track');
+            const nextBtn = document.getElementById('next-slide');
+            const prevBtn = document.getElementById('prev-slide');
+            const cards = document.querySelectorAll('.cs-card');
+            
+            let currentIndex = 0;
+            // Assuming 1 card is shown at a time for the "Keep Exploring" centered look.
+            
+            function updateCarousel() {
+                const cardWidth = cards[0].getBoundingClientRect().width;
+                const gap = 20; // Matches CSS gap
+                track.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            // Handle window resize for carousel width adjustments
+            window.addEventListener('resize', updateCarousel);
+        });
+    </script>
+</body>
+</html>

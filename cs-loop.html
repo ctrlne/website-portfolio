@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop | Case Study</title>
+    
+    <link rel="icon" type="image/png" href="images/me.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="cs-loop.css"> <script src="components.js" defer></script>
+</head>
+<body class="case-study-body">
+
+    <div class="cs-layout-grid">
+        
+        <aside class="cs-sidebar-left">
+            <a href="index.html" class="pill-btn back-to-home">
+                <i class="fa-solid fa-chevron-left"></i> Back to Home
+            </a>
+
+            <div class="contents-wrapper">
+                <h4 class="contents-title">CONTENTS</h4>
+                <nav class="contents-nav" id="scrollspy-nav">
+                    <a href="#overview" class="active">Overview</a>
+                    <a href="#context">Context</a>
+                    <a href="#architecture">Architecture</a>
+                    <a href="#visual-system">Visual System</a>
+                    <a href="#evaluation">Evaluation & QA</a>
+                    <a href="#impact">Impact</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="cs-main-content">
+            
+            <section id="overview" class="cs-section scroll-section">
+                <div class="hero-text-center pop-in">
+                    <p class="hero-overline">Loop - UI/UX, HCI, Mobile App</p>
+                    <h1 class="hero-title gradient-text-loop">Loop</h1>
+                    <p class="hero-subtitle">A gamified peer-to-peer campus barter and resource exchange platform designed to solve the "resource paradox" among university students through secure, verified trading.</p>
+                </div>
+
+                <div class="hero-image-wrapper pop-in delay-1">
+                    <img src="images/loop/loop mockup.png" alt="Loop App Screens" class="full-width-img border-radius-lg shadow-light">
+                </div>
+
+                <div class="project-meta-grid pop-in delay-2">
+                    <div class="meta-item">
+                        <h4>TEAM:</h4>
+                        <p>Claire Antonette Mendoza<br>Joseph Lontok<br>Sebastian Lazaro</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>SCOPE:</h4>
+                        <p>UI/UX<br>Mobile Prototyping<br>Institutional SSO Verification<br>Karma & Trust Systems<br>Smart-Matching Algorithm</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>INDIVIDUAL ROLE:</h4>
+                        <p>I served as the team lead as well as the one who did all 70+ screens on Figma. Designed illustrations and managed the complete prototype interactions for the final mockup.</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>TIMELINE:</h4>
+                        <p>3 Months</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>DESIGN TOOLS:</h4>
+                        <p>Figma, Draw.io, FigmaJam, Notion</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="context" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="accent-num gradient-text-loop">01</span> The Context: Digitizing a Manual System</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="two-col-text pop-in">
+                    <div class="col">
+                        <h4>[Problem Statement]</h4>
+                        <p>University students frequently face a "resource paradox": they own valuable academic materials (textbooks, uniforms, drafting tools) they no longer need, yet lack the financial liquidity to purchase new requirements. Existing solutions like Facebook Marketplace are unstructured, unverified, and lack the campus-specific filters necessary for safe, localized exchanges.</p>
+                        
+                        <h4 class="mt-m">Solution:</h4>
+                        <p>Loop is a mobile application prototype that gamifies the circular economy through a secure, institution-exclusive trading interface. By utilizing a "Swipe-to-Trade" mechanic, Loop transforms the tedious task of resource hunting into an engaging, high-trust discovery process.</p>
+                    </div>
+                    <div class="col text-center">
+                        <img src="images/loop/econ diagram.png" alt="Circular Economy Diagram" class="full-width-img contained-img">
+                    </div>
+                </div>
+            </section>
+
+            <section id="architecture" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="accent-num gradient-text-loop">02</span> Systems Architecture & UX Strategy</h2>
+                    <div class="line"></div>
+                </div>
+                
+                <p class="section-intro pop-in">As the Lead Designer, I focused on reducing cognitive load and establishing a zero-trust safety environment.</p>
+
+                <div class="table-wrapper pop-in mt-m">
+                    <table class="hci-table">
+                        <thead>
+                            <tr>
+                                <th>HCI Feature</th>
+                                <th>UX Strategic Goal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Institutional SSO</strong></td>
+                                <td>Ensures all users are verified students via @mymail.mapua.edu.ph.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Swipe-to-Trade UI</strong></td>
+                                <td>Reduces decision fatigue by presenting items in a focused card-stack interface.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Smart-Match Algorithm</strong></td>
+                                <td>Identifies "double-coincidence of wants" between users across different campuses.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Karma & Trust System</strong></td>
+                                <td>Fosters a self-regulating community through behavioral "Karma Points".</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="centered-text-block pop-in mt-xl">
+                    <h4 class="bold-subheading text-center">[Information Architecture]</h4>
+                    <p class="standard-desc centered">I designed a structural flow that prioritizes secure onboarding and intuitive item discovery, ensuring students can navigate from login to exchange with minimal friction.</p>
+                </div>
+
+                <div class="full-image-block pop-in mt-l">
+                    <img src="images/loop/ia.png" alt="Information Architecture Sitemap" class="full-width-img">
+                </div>
+            </section>
+
+            <section id="visual-system" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="accent-num gradient-text-loop">03</span> UI Design & Visual System</h2>
+                    <div class="line"></div>
+                </div>
+
+                <p class="section-intro pop-in">The visual system was designed to be clean and modern, leveraging Mapua's institutional trust while feeling fresh and "Gen-Z" appropriate.</p>
+                <ul class="custom-list bulleted pop-in">
+                    <li><strong>Gamified Interactions:</strong> The "Right Swipe" for interest makes the bartering process feel like a social experience rather than a transaction.</li>
+                    <li><strong>Safe Exchange Zones:</strong> To facilitate secure logistics, the chat interface features integrated maps suggesting common "Safe Exchange Zones" like campus lobbies.</li>
+                    <li><strong>Operational Efficiency:</strong> The "Post Item" form uses quick-select category pills (Books, Uniforms, Tech) to streamline the listing process.</li>
+                </ul>
+
+                <div class="full-image-block pop-in mt-l">
+                    <h4 class="bold-subheading">[Design System]</h4>
+                    <img src="images/loop/design system.png" alt="Loop Typography and Colors" class="full-width-img mt-s shadow-light border-radius-lg">
+                    <img src="images/loop/logos.png" alt="Loop and Mapua Logos" class="contained-img mt-m" style="max-width: 300px; display:block; margin-left:0;">
+                </div>
+
+                <div class="video-showcase pop-in mt-xl">
+                    <h4 class="italic-subheading text-center">I. Authentication & Security</h4>
+                    <img src="videos/loop/I..gif" alt="Authentication and Security Animations" class="full-width-img mt-m">
+                    
+                    <div class="caption-grid-2 mt-s">
+                        <div class="caption-block">
+                            <h5>Sign Up Flow</h5>
+                            <p>A secure onboarding process requiring Mapua institutional email verification to establish a zero-trust community.</p>
+                        </div>
+                        <div class="caption-block">
+                            <h5>Recovery System</h5>
+                            <p>A streamlined "Forgot Password" workflow ensuring users never lose access to their trade history or Karma status.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-showcase pop-in mt-xl">
+                    <h4 class="italic-subheading text-center">II. Discovery & Match Logic</h4>
+                    <img src="videos/loop/II..gif" alt="Discovery and Match Logic Animations" class="full-width-img mt-m">
+                    
+                    <div class="caption-grid-2 mt-s">
+                        <div class="caption-block">
+                            <h5>The "Swipe-to-Trade" Home</h5>
+                            <p>An intuitive card-stack interface that reduces cognitive load with real-time feedback when two students' resource needs align.</p>
+                        </div>
+                        <div class="caption-block">
+                            <h5>Exploration Hub</h5>
+                            <p>A categorized catalog for traditional browsing, filtered by Books, Uniforms, Tech, and more.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-showcase pop-in mt-xl">
+                    <h4 class="italic-subheading text-center">III. Management & Logistics</h4>
+                    <img src="videos/loop/III..gif" alt="Management and Logistics Animations" class="full-width-img mt-m">
+                    
+                    <div class="caption-grid-3 mt-s">
+                        <div class="caption-block">
+                            <h5>Dynamic Listing Portal</h5>
+                            <p>A simplified form with category pills and condition tags for rapid item uploads.</p>
+                        </div>
+                        <div class="caption-block">
+                            <h5>Intelligent Chat Hub</h5>
+                            <p>A secure communication interface featuring integrated campus maps to suggest "Safe Exchange Zones".</p>
+                        </div>
+                        <div class="caption-block">
+                            <h5>User Profile & Trust</h5>
+                            <p>A centralized view of active listings and "Karma & Trust Points" to foster community accountability.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="evaluation" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="accent-num gradient-text-loop">04</span> Evaluation & User Research</h2>
+                    <div class="line"></div>
+                </div>
+
+                <p class="section-intro pop-in">This project was validated through rigorous HCI testing, focusing on the System Usability Scale (SUS).</p>
+                <ul class="custom-list bulleted pop-in">
+                    <li><strong>Quantitative Success:</strong> The prototype achieved an average SUS score of 84.38, placing it in the "Grade A / Excellent" category.</li>
+                    <li><strong>User Confidence:</strong> 70% of testers strongly agreed they felt confident using the app, and 55% strongly agreed they would like to use the system frequently.</li>
+                    <li><strong>Learnability:</strong> 70% of users felt the system was very easy to learn, validating our goal of reducing cognitive load through the swipe interface.</li>
+                </ul>
+
+                <div class="full-image-block pop-in mt-l">
+                    <img src="images/loop/sus.png" alt="SUS Score Charts" class="full-width-img">
+                </div>
+            </section>
+
+            <section id="impact" class="cs-section scroll-section">
+                <div class="section-header-line pop-in">
+                    <div class="line"></div>
+                    <h2 class="section-heading"><span class="accent-num gradient-text-loop">05</span> Impact & Reflection</h2>
+                    <div class="line"></div>
+                </div>
+
+                <p class="section-intro pop-in">Loop proves that by applying HCI principles like gamification and institutional verification, we can solve complex logistical problems within a campus community.</p>
+
+                <div class="what-i-learned-block pop-in mt-xl">
+                    <h4 class="left-align-heading gradient-text-loop">What I Learned</h4>
+                    <p class="standard-desc centered-indented">Balancing security (SSO) with high-speed interaction (Swipe UI) is essential for maintaining user engagement in a peer-to-peer marketplace.</p>
+                </div>
+
+                <div class="cs-outro pop-in mt-xl">
+                    <hr class="thin-line">
+                    <h2 class="accent-italic-heading gradient-text-loop">Thank You For Stopping By!</h2>
+                    <p>Feel free to leave any thoughts :)</p>
+                    <div class="outro-links">
+                        <p>Email: <a href="mailto:mendozaclaireantonette791@gmail.com">mendozaclaireantonette791@gmail.com</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/claire-antonette-mendoza-5506382b3/" target="_blank">Claire Antonette Mendoza</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="keep-exploring-section pop-in">
+                <h3 class="accent-italic-heading small gradient-text-loop">Keep Exploring!</h3>
+                
+                <div class="projects-grid mt-l">
+                    <a href="cs-tyche.html" class="project-card" style="--hover-glow: rgba(244, 143, 177, 0.6);">
+                        <div class="project-top-container">
+                            <img src="images/tyche nails.png" alt="Tyche Nails App">
+                        </div>
+                        <h3>Tyche Nails</h3>
+                        <p class="subtitle">Data-Driven Salon Management</p>
+                        <p class="desc">An end-to-end platform integrating intuitive UI with a predictive analytics dashboard to help salon owners track KPIs.</p>
+                        <div class="tags">
+                            <span class="tag" style="background-color: var(--accent-red);">UI/UX</span>
+                            <span class="tag" style="background-color: var(--accent-red);">ADMIN</span>
+                            <span class="tag" style="background-color: var(--accent-red);">MOBILE</span>
+                        </div>
+                    </a>
+
+                    <a href="cs-agos.html" class="project-card" style="--hover-glow: rgba(71, 165, 165, 0.162);">
+                        <div class="project-top-container">
+                            <img src="images/project agos.png" alt="Project AGOS">
+                        </div>
+                        <h3>Project AGOS</h3>
+                        <p class="subtitle">Resource Mapping & Workflow</p>
+                        <p class="desc">A digital workflow application designed to map vital resources and translate complex user journeys into an accessible interface.</p>
+                        <div class="tags">
+                            <span class="tag" style="background-color: var(--accent-red);">UI/UX</span>
+                            <span class="tag" style="background-color: var(--accent-red);">ADMIN</span>
+                            <span class="tag" style="background-color: var(--accent-red);">MOBILE</span>
+                        </div>
+                    </a>
+                    
+                    <a href="cs-cocopan.html" class="project-card" style="--hover-glow: rgba(223, 127, 25, 0.075);">
+                        <div class="project-top-container">
+                            <img src="images/cocopan.png" alt="Cocopan Insights Dashboard" class="cocopan-img">
+                        </div>
+                        <h3>Cocopan Insights</h3>
+                        <p class="subtitle">SME Business Intelligence</p>
+                        <p class="desc">A comprehensive business intelligence dashboard transforming raw datasets into actionable visualizations.</p>
+                        <div class="tags">
+                            <span class="tag" style="background-color: var(--accent-red);">DATA ANALYTICS</span>
+                            <span class="tag" style="background-color: var(--accent-red);">ADMIN</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <aside class="cs-sidebar-right">
+            <button class="circle-btn back-to-top" id="btt-btn">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+        </aside>
+
+    </div>
+
+    <site-footer></site-footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const popElements = document.querySelectorAll('.pop-in');
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                });
+            }, observerOptions);
+
+            popElements.forEach(el => appearOnScroll.observe(el));
+
+            const sections = document.querySelectorAll('.scroll-section');
+            const navLinks = document.querySelectorAll('.contents-nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 300)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            const bttBtn = document.getElementById('btt-btn');
+            bttBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
