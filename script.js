@@ -160,5 +160,38 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCameraScreen();
         });
     }
+    // --- 6. HANDLE URL HASH ON PAGE LOAD (Cross-page navigation) ---
+    const hash = window.location.hash; 
+    
+    if (hash) {
+        // Remove the '#' to get the target ID (e.g., "archive" or "about")
+        const targetId = hash.substring(1); 
+        const targetPage = document.getElementById(targetId);
+        
+        // If the section exists, switch to it immediately
+        if (targetPage && targetPage.classList.contains('page-section')) {
+            
+            // 1. Hide all pages & reset animations
+            document.querySelectorAll(".page-section").forEach(page => {
+                page.classList.remove("active");
+                page.style.animation = 'none';
+                page.offsetHeight; 
+                page.style.animation = null; 
+            });
+
+            // 2. Show the target page
+            targetPage.classList.add("active");
+
+            // 3. Update navbar active states so the highlight moves
+            document.querySelectorAll(".nav-links a").forEach(l => l.classList.remove("active"));
+            const correspondingNavLink = document.querySelector(`.nav-links a[data-target="${targetId}"]`);
+            if (correspondingNavLink) {
+                correspondingNavLink.classList.add("active");
+            }
+            
+            // 4. Force scroll to top so it doesn't jump weirdly
+            window.scrollTo(0, 0);
+        }
+    }
 
 });
