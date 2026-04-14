@@ -631,7 +631,20 @@ body.dark-mode.case-study-body {
     color: #e0e0e0; /* Soft white for body text */
 }
 
-/* Headings: Pure White */
+/* --- IMAGE SWAPPING LOGIC --- */
+/* Hide the dark image by default */
+.img-dark { 
+    display: none; 
+}
+/* When dark mode is active, hide light image, show dark image */
+body.dark-mode .img-light { 
+    display: none; 
+}
+body.dark-mode .img-dark { 
+    display: block; 
+}
+
+/* --- TEXT COLORS: PURE WHITE --- */
 body.dark-mode .section-heading,
 body.dark-mode .bold-heading,
 body.dark-mode .italic-subheading,
@@ -640,11 +653,14 @@ body.dark-mode .restricted-title,
 body.dark-mode .hero-subtitle,
 body.dark-mode .meta-item h4,
 body.dark-mode .two-col-text h4,
-body.dark-mode .engineering-grid h4 {
+body.dark-mode .engineering-grid h4,
+body.dark-mode .dark-serif-heading, /* Added */
+body.dark-mode .ux-decisions h4,    /* Added */
+body.dark-mode .outro-links a {     /* Outro Links Added */
     color: #ffffff; 
 }
 
-/* Body Text & Descriptions: Soft White/Grey */
+/* --- TEXT COLORS: SOFT WHITE/GREY --- */
 body.dark-mode .section-intro,
 body.dark-mode .standard-desc,
 body.dark-mode .custom-list li,
@@ -653,7 +669,12 @@ body.dark-mode .caption-desc,
 body.dark-mode .caption-block p,
 body.dark-mode .contents-nav a,
 body.dark-mode .two-col-text p,
-body.dark-mode .restricted-desc {
+body.dark-mode .restricted-desc,
+body.dark-mode .exact-intro,        /* Added */
+body.dark-mode .italic-desc,        /* Added */
+body.dark-mode .node p,             /* Added timeline text */
+body.dark-mode .outro-links,        /* Added */
+body.dark-mode .outro-links p {     /* Added */
     color: #cccccc;
 }
 
@@ -668,29 +689,35 @@ body.dark-mode .contents-nav a.active {
 }
 
 /* Structural Lines */
+/* 1. Elements that use BACKGROUND-COLOR for their lines */
 body.dark-mode .section-header-line .line,
 body.dark-mode .thin-line,
 body.dark-mode .timeline-line,
-body.dark-mode .connector-s03-polished,
 body.dark-mode .connector-s03-polished::after,
-body.dark-mode .connector-s03-mobile,
 body.dark-mode .connector-s03-mobile::after,
 body.dark-mode .connector-elbow-top,
 body.dark-mode .connector-elbow-top::before,
 body.dark-mode .connector-elbow-top::after,
 body.dark-mode .connector-branch-bottom,
-body.dark-mode .connector-branch-bottom::after,
 body.dark-mode .vertical-spacer-line {
-    background-color: #444444;
-    border-color: #444444;
+    background-color: #555555;
+}
+
+/* 2. Elements that use BORDERS for their lines (Crucial Fix) */
+body.dark-mode .connector-s03-polished,
+body.dark-mode .connector-s03-mobile,
+body.dark-mode .connector-branch-bottom::after {
+    border-color: #555555;
+    background-color: transparent !important; /* Ensures the box stays invisible */
 }
 
 /* Timeline Circles */
 body.dark-mode .node .circle {
     background-color: #1a1a1a;
-    border-color: #555;
+    border-color: #bababa;
 }
 body.dark-mode .node.active .circle {
+    /* Uses whatever accent color is set for that specific case study */
     border-color: var(--color-accent-teal, var(--color-vibrant-pink, var(--color-loop-solid, #fff))); 
 }
 
@@ -709,8 +736,8 @@ body.dark-mode .circle-btn:hover {
 
 /* Keep Exploring Cards */
 body.dark-mode .keep-exploring-section .project-card {
-    background-color: #222222;
-    border-color: #444444;
+    background-color: #2e2e2e;
+    border-color: #595959;
 }
 
 body.dark-mode .keep-exploring-section .project-top-container {
