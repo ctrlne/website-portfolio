@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "website-portfolio",
+  "name": "cam",
   "compatibility_date": "2026-04-15",
   "observability": {
     "enabled": true
